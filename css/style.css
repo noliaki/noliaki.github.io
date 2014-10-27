@@ -1,0 +1,131 @@
+@charset "utf-8";
+/*----------------------------------------------------
+
+  reset
+/*====================================================*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/*----------------------------------------------------
+
+  common
+====================================================*/
+html {
+  overflow-y: scroll; }
+
+body {
+  font-family: Verdana, Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  height: 100%;
+  line-height: 1.7;
+  -webkit-text-size-adjust: 100%; }
+
+input, textarea {
+  font-family: Verdana, Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; }
+
+/* for IE6 */
+* html body,
+* html input,
+* html textarea {
+  font-family: "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif; }
+
+/* select color
+----------------------------------------------------*/
+::selection {
+  background: #00aaff;
+  color: white; }
+
+::-moz-selection {
+  background: #00aaff;
+  color: white; }
+
+/* link
+----------------------------------------------------*/
+a {
+  color: #333333;
+  outline: none;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear; }
+  a:hover {
+    color: #d6d6d6; }
+
+h1 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 34px;
+  text-align: center; }
+  h1 .small {
+    font-size: 28px; }
+  h1 a {
+    color: #00263d;
+    text-decoration: none; }
+    h1 a:hover {
+      color: #e33e35; }
+
+.lab-list {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 20px 20px; }
+  .lab-list li {
+    margin-top: 17px;
+    list-style: inside decimal;
+    color: #fff; }
+  .lab-list a {
+    display: block;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    background: #34495e;
+    text-decoration: none;
+    padding: 10px;
+    color: #fff; }
+    .lab-list a:hover {
+      color: #34495e;
+      background: #d0dbe5; }
