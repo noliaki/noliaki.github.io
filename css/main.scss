@@ -3,33 +3,39 @@
 ---
 @charset "utf-8";
 
+// color
+// http://adobe.ly/1iZpp9G
 
+// font
+//
 
 // Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$base-font-family : 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, '游ゴシック', YuGothic, sans-serif;
+$base-font-size   : 16px;
+$base-font-weight : 400;
+$small-font-size  : $base-font-size * 0.875;
+$base-line-height : 1.5;
 
-$spacing-unit:     30px;
+$spacing-unit     : 30px;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$text-color       : #0D203F;
+$background-color : #F4EDEB;
+$brand-color      : #2a7ae2;
+$accent-color     : #F3363D;
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$border-color       : #D7BD9C;
+$border-color-light : lighten($border-color, 40%);
+$border-color-dark  : darken($border-color, 25%);
 
 // Width of the content area
-$content-width:    800px;
+$content-width    : 800px;
 
-$on-palm:          600px;
-$on-laptop:        800px;
+$on-palm          : 600px;
+$on-laptop        : 800px;
 
 
 
-// Using media queries with like this:
+// Use media queries like this:
 // @include media-query($on-palm) {
 //     .wrapper {
 //         padding-right: $spacing-unit / 2;
@@ -37,9 +43,9 @@ $on-laptop:        800px;
 //     }
 // }
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+  @media screen and (max-width: $device) {
+    @content;
+  }
 }
 
 
