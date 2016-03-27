@@ -2,7 +2,7 @@
  * Site header
  */
 .site-header {
-  border-bottom : 1px solid $grey-color-light;
+  border-bottom : 1px solid $border-color;
   text-align: center;
 }
 
@@ -12,10 +12,6 @@
 
 .site-title-main {
   font-size      : $base-font-size * 1.5;
-}
-
-.site-title-sub {
-  font-size: $base-font-size * 0.5;
 }
 
 .site-nav {
@@ -92,8 +88,10 @@
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+  border-top: 1px solid $border-color;
+  margin-top: $spacing-unit * 1.5;
+  background: #F4EDEB;
+  text-align: center;
 }
 
 .footer-heading {
@@ -158,79 +156,35 @@
 
 
 
-/**
- * Page content
- */
-.page-content {
-    padding: $spacing-unit 0;
-}
+.posts {
+  &-item {
+    margin-top: $spacing-unit;
 
-.page-heading {
-    font-size: 20px;
-}
-
-.post-list {
-    margin-left: 0;
-    list-style: none;
-
-    > li {
-        margin-bottom: $spacing-unit;
-    }
-}
-
-.post-meta {
-    font-size: $small-font-size;
-    color: $grey-color;
-}
-
-.post-link {
-    display: block;
-    font-size: 24px;
-}
-
-
-
-/**
- * Posts
- */
-.post-header {
-    margin-bottom: $spacing-unit;
-}
-
-.post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
-
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
-}
-
-.post-content {
-    margin-bottom: $spacing-unit;
-
-    h2 {
-        font-size: 32px;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
+    &-header {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: $spacing-unit / 3;
     }
 
-    h3 {
-        font-size: 26px;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
+    &-date-day,
+    &-date-month-year {
+      display: block;
+      text-align: center;
     }
 
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
+    &-date-day {
+      font-size: 2.5rem;
+      color: $accent-color;
+      line-height: 1;
     }
+
+    &-date-month-year {
+      font-size: 0.7rem;
+    }
+
+    &-title {
+      margin: 0 0 0 1.3rem;
+      font-size: 2.2rem;
+    }
+  }
 }

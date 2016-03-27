@@ -19,3 +19,8 @@ github_username:  noliaki
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+
+sass:
+  style: compressed

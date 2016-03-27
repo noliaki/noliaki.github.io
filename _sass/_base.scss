@@ -91,15 +91,15 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: $accent-color;
+  color: $link-color;
   text-decoration: none;
 
   &:visited {
-    color: darken($accent-color, 15%);
+    color: darken($link-color, 15%);
   }
 
   &:hover {
-    color: $text-color;
+    color: $link-color;
     text-decoration: underline;
   }
 }
@@ -154,6 +154,10 @@ pre {
   font-family: 'Montserrat Alternates', sans-serif;
 }
 
+.monda {
+  font-family: 'Monda', sans-serif;
+}
+
 /**
  * Wrapper
  */
@@ -205,4 +209,31 @@ pre {
       fill: $grey-color;
     }
   }
+}
+
+@for $i from 0 through 20 {
+  .mt-#{$i} {
+    margin-top: #{$i}px;
+  }
+  .mr-#{$i} {
+    margin-right: #{$i}px;
+  }
+  .mb-#{$i} {
+    margin-bottom: #{$i}px;
+  }
+  .ml-#{$i} {
+    margin-left: #{$i}px;
+  }
+}
+
+.ta-left {
+  text-align: left;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.ta-right {
+  text-align: right;
 }

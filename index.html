@@ -1,23 +1,24 @@
 ---
 layout: default
 ---
-
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="posts">
+  {% for post in site.posts %}
+    <article class="posts-item" itemscope itemtype="http://schema.org/BlogPosting">
+      <header class="posts-item-header">
+        <time class="posts-item-date montserrat_alternates" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+          <span class="posts-item-date-day">{{ post.date | date: "%-d"}}</span>
+          <span class="posts-item-date-month-year">{{ post.date | date: "%b, %Y"}}</span>
+        </time>
+        <h1 class="posts-item-title" itemprop="name headline"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+      </header>
+      <div class="posts-item-tags">
+        {% comment %}
+        {% for category in post.categories %}
+          <span class="posts-item-category">{{ category }}</span>
+        {% endfor %}
+        {% endcomment %}
+      </div>
+      <div class="posts-item-excerpt">{{ post.excerpt | strip_html }}<a href="{{ post.url | prepend: site.baseurl }}">...続きを見る</a></div>
+    </article>
+  {% endfor %}
 </div>
